@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7F83DD2551046A002D0E4F /* TestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7F83DC2551046A002D0E4F /* TestDetailViewController.m */; };
 		6AA6276C1B1574CA003A6B2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6276B1B1574CA003A6B2B /* main.m */; };
 		6AA6276F1B1574CA003A6B2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6276E1B1574CA003A6B2B /* AppDelegate.m */; };
 		6AA627771B1574CA003A6B2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA627761B1574CA003A6B2B /* Images.xcassets */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B7F83DB2551046A002D0E4F /* TestDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDetailViewController.h; sourceTree = "<group>"; };
+		5B7F83DC2551046A002D0E4F /* TestDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDetailViewController.m; sourceTree = "<group>"; };
 		6AA627661B1574CA003A6B2B /* MGJRouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGJRouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA6276A1B1574CA003A6B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AA6276B1B1574CA003A6B2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				6AA6276E1B1574CA003A6B2B /* AppDelegate.m */,
 				6AA6279D1B15AFC9003A6B2B /* DemoListViewController.h */,
 				6AA6279E1B15AFC9003A6B2B /* DemoListViewController.m */,
+				5B7F83DB2551046A002D0E4F /* TestDetailViewController.h */,
+				5B7F83DC2551046A002D0E4F /* TestDetailViewController.m */,
 				6AA627A01B15AFFE003A6B2B /* DemoDetailViewController.h */,
 				6AA627A11B15AFFE003A6B2B /* DemoDetailViewController.m */,
 				6AA627761B1574CA003A6B2B /* Images.xcassets */,
@@ -196,6 +201,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA627921B157940003A6B2B /* MGJRouter.m in Sources */,
+				5B7F83DD2551046A002D0E4F /* TestDetailViewController.m in Sources */,
 				6AA6276F1B1574CA003A6B2B /* AppDelegate.m in Sources */,
 				6AA6276C1B1574CA003A6B2B /* main.m in Sources */,
 				6AA627A21B15AFFE003A6B2B /* DemoDetailViewController.m in Sources */,

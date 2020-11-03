@@ -157,7 +157,7 @@
 {
     [MGJRouter registerURLPattern:@"mgj://foo/bar" toHandler:^(NSDictionary *routerParameters) {
         [self appendLog:@"匹配到了 url，以下是相关信息"];
-        [self appendLog:[NSString stringWithFormat:@"routerParameters:%@", routerParameters]];
+        [self appendLog:[NSString stringWithFormat:@"routerParameters:%@", routerParameters]]; // routerParameters @{@"MGJRouterParameterURL": @"mgj://foo/bar"}
     }];
     
     [MGJRouter openURL:@"mgj://foo/bar"];

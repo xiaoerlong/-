@@ -164,6 +164,7 @@ NSString *const MGJRouterParameterUserInfo = @"MGJRouterParameterUserInfo";
     if (handler && subRoutes) {
         subRoutes[@"_"] = [handler copy];
     }
+    //self.routes @{@"mgj": @{@"foo": @{@"bar": @{@"_": handler.copy}}}}
 }
 
 - (void)addURLPattern:(NSString *)URLPattern andObjectHandler:(MGJRouterObjectHandler)handler
@@ -182,10 +183,15 @@ NSString *const MGJRouterParameterUserInfo = @"MGJRouterParameterUserInfo";
     
     for (NSString* pathComponent in pathComponents) {
         if (![subRoutes objectForKey:pathComponent]) {
+            // 给subRoutes指向的value 赋值，就会修改self.routes里面key对象的value
             subRoutes[pathComponent] = [[NSMutableDictionary alloc] init];
         }
+        // 重新指向value
         subRoutes = subRoutes[pathComponent];
     }
+    /**
+     @{@"mgj": @{@"foo": @{@"bar": @{}}}}
+     */
     return subRoutes;
 }
 
