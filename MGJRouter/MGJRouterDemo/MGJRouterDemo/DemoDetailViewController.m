@@ -217,6 +217,7 @@
 #define TEMPLATE_URL @"mgj://search/:keyword"
     
 [MGJRouter registerURLPattern:TEMPLATE_URL  toHandler:^(NSDictionary *routerParameters) {
+    // @[@"MGJRouterParameterURL": @""mgj://search/Hangzhou", @"keyword": @"Hangzhou"]
     NSLog(@"routerParameters[keyword]:%@", routerParameters[@"keyword"]); // Hangzhou
 }];
 

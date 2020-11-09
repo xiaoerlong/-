@@ -38,6 +38,10 @@ static NSMutableArray *titles;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
+    [MGJRouter registerURLPattern:@"mgj://a/b/c//d/h?" toHandler:^(NSDictionary *routerParameters) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,14 +66,8 @@ static NSMutableArray *titles;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    UIViewController *viewController = ((ViewControllerHandler)titleWithHandlers[titles[indexPath.row]])();
-//    [self.navigationController pushViewController:viewController animated:YES];
-    /**
-     假设detail页面已经注册
-     */
-    [MGJRouter openURL:@"mgj://detail?id=404" completion:^(id result) {
-        
-    }];
+    UIViewController *viewController = ((ViewControllerHandler)titleWithHandlers[titles[indexPath.row]])();
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

@@ -114,7 +114,7 @@ NSString *const MGJRouterParameterUserInfo = @"MGJRouterParameterUserInfo";
         if (i == pattern.length - 1 && startIndexOfColon) {
             NSRange range = NSMakeRange(startIndexOfColon, i - startIndexOfColon + 1);
             NSString *placeholder = [pattern substringWithRange:range];
-            if (![self checkIfContainsSpecialCharacter:placeholder]) {
+            if (![self checkIfContainsSpecialCharacter:placeholder]) { // 没有特殊字符
                 [placeholders addObject:placeholder];
             }
         }
@@ -289,7 +289,7 @@ NSString *const MGJRouterParameterUserInfo = @"MGJRouterParameterUserInfo";
 }
 
 - (NSArray*)pathComponentsFromURL:(NSString*)URL
-{
+{ // 获取路径和协议
 
     NSMutableArray *pathComponents = [NSMutableArray array];
     if ([URL rangeOfString:@"://"].location != NSNotFound) {
